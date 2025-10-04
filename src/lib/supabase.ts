@@ -1,13 +1,31 @@
 import { createClient } from '@supabase/supabase-js';
 
-const supabaseUrl = import.meta.env.VITE_SUPABASE_URL;
-const supabaseAnonKey = import.meta.env.VITE_SUPABASE_ANON_KEY;
+// Default to empty strings to prevent runtime errors
+const supabaseUrl = import.meta.env.VITE_SUPABASE_URL || '';
+const supabaseAnonKey = import.meta.env.VITE_SUPABASE_ANON_KEY || '';
 
-if (!supabaseUrl || !supabaseAnonKey) {
-  throw new Error('Missing Supabase environment variables');
+// Only throw error in development
+if (import.meta.env.DEV && (!supabaseUrl || !supabaseAnonKey)) {
+  console.error('Missing Supabase environment variables');
+  console.log('Please set VITE_SUPABASE_URL and VITE_SUPABASE_ANON_KEY in your .env file');
 }
 
-export const supabase = createClient(supabaseUrl, supabaseAnonKey);
+export const supabase = createClient(supabaseUrl, supabaseAnonKey, {
+  auth: {
+    autoRefreshToken: true,
+    persistSession: true,
+    detectSessionInUrl: true
+  }
+});
+
+// Add a check for Supabase connection in development
+if (import.meta.env.DEV) {
+  supabase.auth.getSession().then(({ data: { session } }) => {
+    console.log('Supabase session:', session ? 'Authenticated' : 'Not authenticated');
+  }).catch(error => {
+    console.error('Supabase connection error:', error.message);
+  });
+}
 
 export interface Service {
   id: string;
