@@ -33,8 +33,10 @@ jobs:
         
       - name: Build
         run: |
+          rm -rf dist
           npm run build
           touch dist/.nojekyll
+          ls -la dist/
           
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
