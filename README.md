@@ -26,6 +26,10 @@ npm run build
 
 This project is set up to deploy to GitHub Pages automatically when you push to the `main` branch.
 
+**Current Status**: Deployment in progress...
+
+Your site will be available at: [https://lamqam.github.io/redoxy/](https://lamqam.github.io/redoxy/)
+
 ### Manual Deployment
 
 1. Build the project:
