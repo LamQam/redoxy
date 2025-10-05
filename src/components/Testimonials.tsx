@@ -89,7 +89,7 @@ export default function Testimonials() {
         <div className="mt-16 text-center">
           <div className="inline-block bg-blue-50 rounded-2xl p-8 border border-blue-100">
             <p className="text-gray-700 text-lg mb-4">
-              Join hundreds of satisfied clients who trust REDOXY for their industrial and environmental needs
+              Join satisfied clients who trust REDOXY for their industrial and environmental needs
             </p>
             <button
               onClick={() => {

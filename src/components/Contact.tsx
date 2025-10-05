@@ -63,7 +63,7 @@ export default function Contact() {
               Get In Touch
             </h2>
             <p className="text-xl text-gray-600">
-              Ready to start your project? Contact us today for a free consultation
+              Ready to start your project? Contact us today!
             </p>
           </div>
 
@@ -91,8 +91,7 @@ export default function Contact() {
                   </div>
                   <div>
                     <h4 className="font-semibold text-gray-900 mb-1">Phone</h4>
-                    <p className="text-gray-600">+966 XX XXX XXXX</p>
-                    <p className="text-sm text-gray-500 mt-1">24/7 Emergency Hotline Available</p>
+                    <p className="text-gray-600">+966 53 378 6083 | +966 56 130 7242</p>
                   </div>
                 </div>
 
@@ -111,10 +110,7 @@ export default function Contact() {
               <div className="bg-gradient-to-br from-blue-50 to-blue-100 rounded-xl p-6 border border-blue-200">
                 <h4 className="font-semibold text-gray-900 mb-3">Business Hours</h4>
                 <div className="space-y-2 text-gray-700">
-                  <p>Monday - Friday: 8:00 AM - 6:00 PM</p>
-                  <p>Saturday: 9:00 AM - 2:00 PM</p>
-                  <p>Sunday: Closed</p>
-                  <p className="text-blue-700 font-medium mt-3">Emergency services available 24/7</p>
+                  <p>Sunday - Friday: 8:30 AM - 4:30 PM</p>
                 </div>
               </div>
             </div>

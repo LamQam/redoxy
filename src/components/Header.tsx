@@ -14,14 +14,14 @@ export default function Header() {
 
   return (
     <header className="fixed top-0 left-0 right-0 z-50 bg-white/95 backdrop-blur-sm shadow-sm">
-      <nav className="container mx-auto px-4 py-4">
+      <nav className="container mx-auto px-4 py-0">
         <div className="flex items-center justify-between">
-          <a href="/" className="flex items-center space-x-2 hover:opacity-90 transition-opacity">
+          <a href="/" className="flex items-center hover:opacity-90 transition-opacity">
             <img 
               // Update the logo path to work with the base URL
               src={`${import.meta.env.BASE_URL || ''}/logo.webp`} 
               alt="Redoxy Logo" 
-              className="h-10 w-auto"
+              className="h-16 w-auto"
               onError={(e) => {
                 // Fallback in case the image fails to load
                 const target = e.target as HTMLImageElement;

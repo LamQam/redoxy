@@ -12,10 +12,23 @@ export default function Hero() {
     <section id="home" className="pt-24 pb-16 bg-gradient-to-br from-slate-50 via-blue-50 to-slate-100">
       <div className="container mx-auto px-4">
         <div className="max-w-4xl mx-auto text-center">
-          <div className="inline-block mb-6">
-            <span className="bg-blue-100 text-blue-700 px-4 py-2 rounded-full text-sm font-semibold">
-              ISO 9001 | ISO 14001 | OHSAS 18001 Certified
-            </span>
+          <div className="flex justify-center items-center gap-4 mb-6">
+            <img 
+              src={`${import.meta.env.BASE_URL || ''}/ISO14001.png`} 
+
+              alt="ISO 9001 Certified" 
+              className="h-12 w-auto object-contain"
+            />
+            <img 
+              src={`${import.meta.env.BASE_URL || ''}/OHSAS-18001.png`} 
+              alt="ISO 14001 Certified" 
+              className="h-12 w-auto object-contain"
+            />
+            <img 
+              src={`${import.meta.env.BASE_URL || ''}/ISO-9001.webp`} 
+              alt="ISO 45001 Certified" 
+              className="h-12 w-auto object-contain"
+            />
           </div>
 
           <h1 className="text-5xl md:text-6xl lg:text-7xl font-bold text-gray-900 mb-6 leading-tight">
@@ -26,8 +39,7 @@ export default function Hero() {
           </h1>
 
           <p className="text-xl text-gray-600 mb-10 max-w-2xl mx-auto leading-relaxed">
-            Leading provider of hazardous waste treatment, environmental solutions, and industrial services in Jubail, Saudi Arabia.
-          </p>
+          Welcome to REDOXY — pioneers in advanced hazardous waste treatment in Jubail, Saudi Arabia. From chemical oxidation to wastewater evaporation, we deliver sustainable solutions for a better tomorrow.          </p>
 
           <div className="flex flex-col sm:flex-row gap-4 justify-center mb-16">
             <button
@@ -72,7 +84,7 @@ export default function Hero() {
               </div>
               <h3 className="font-semibold text-gray-900 mb-2">Industry Leaders</h3>
               <p className="text-gray-600 text-sm">
-                Trusted by major industrial facilities across the region
+                Trusted by 20+ industrial facilities across the region
               </p>
             </div>
           </div>
