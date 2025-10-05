@@ -1,5 +1,5 @@
 import { useEffect, useState } from 'react';
-import { supabase, Service } from '../lib/supabase';
+import { supabase, Service, ServiceInquiry } from '../lib/supabase';
 import {
   AlertTriangle,
   Droplet,
@@ -10,7 +10,11 @@ import {
   Shield,
   Compass,
   Wrench,
-  Check
+  Check,
+  X,
+  Send,
+  CheckCircle,
+  AlertCircle
 } from 'lucide-react';
 
 const iconMap: Record<string, any> = {
@@ -29,6 +33,17 @@ export default function Services() {
   const [services, setServices] = useState<Service[]>([]);
   const [loading, setLoading] = useState(true);
   const [selectedCategory, setSelectedCategory] = useState<string>('All');
+  const [showInquiryModal, setShowInquiryModal] = useState(false);
+  const [selectedService, setSelectedService] = useState<Service | null>(null);
+  const [inquiryStatus, setInquiryStatus] = useState<'idle' | 'loading' | 'success' | 'error'>('idle');
+  const [inquiryError, setInquiryError] = useState('');
+  const [formData, setFormData] = useState<Omit<ServiceInquiry, 'service_id' | 'status'>>({
+    contact_name: '',
+    contact_email: '',
+    contact_phone: '',
+    project_details: '',
+    urgency: 'medium'
+  });
 
   const categories = ['All', 'Waste Treatment', 'Environmental', 'Industrial', 'Other'];
 
