@@ -16,12 +16,20 @@ export default function Header() {
     <header className="fixed top-0 left-0 right-0 z-50 bg-white/95 backdrop-blur-sm shadow-sm">
       <nav className="container mx-auto px-4 py-4">
         <div className="flex items-center justify-between">
-          <div className="flex items-center space-x-2">
-            <div className="w-10 h-10 bg-gradient-to-br from-blue-600 to-blue-800 rounded-lg flex items-center justify-center">
-              <span className="text-white font-bold text-xl">R</span>
-            </div>
-            <span className="text-2xl font-bold text-gray-900">REDOXY</span>
-          </div>
+          <a href="/" className="flex items-center space-x-2 hover:opacity-90 transition-opacity">
+            <img 
+              // Update the logo path to work with the base URL
+              src={`${import.meta.env.BASE_URL || ''}/logo.webp`} 
+              alt="Redoxy Logo" 
+              className="h-10 w-auto"
+              onError={(e) => {
+                // Fallback in case the image fails to load
+                const target = e.target as HTMLImageElement;
+                target.onerror = null;
+                target.src = 'data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAyMDAgNTAiPjxyZWN0IHdpZHRoPSIyMDAiIGhlaWdodD0iNTAiIGZpbGw9Ii8jMDA3OGQ3Ii8+PHRleHQgeD0iMTAwIiB5PSIzMCIgZm9udC1mYW1pbHk9IkFyaWFsIiBmb250LXNpemU9IjI0IiBmaWxsPSJ3aGl0ZSIgdGV4dC1hbmNob3I9Im1pZGRsZSIgZm9udC13ZWlnaHQ9ImJvbGQiPlJFRE9YWTwvdGV4dD48L3N2Zz4=';
+              }}
+            />
+          </a>
 
           <div className="hidden md:flex items-center space-x-8">
             <button onClick={() => scrollToSection('home')} className="text-gray-700 hover:text-blue-600 transition">
