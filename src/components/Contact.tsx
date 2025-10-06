@@ -1,5 +1,6 @@
 import { useState } from 'react';
 import { supabase, ContactSubmission } from '../lib/supabase';
+import { sendContactFormNotification } from '../lib/email';
 import { Mail, Phone, MapPin, Send, CheckCircle } from 'lucide-react';
 
 export default function Contact() {
@@ -27,6 +28,15 @@ export default function Contact() {
         .insert([formData]);
 
       if (submitError) throw submitError;
+
+      // Send email notification to admin
+      try {
+        await sendContactFormNotification(formData);
+        console.log('Email notification sent successfully');
+      } catch (emailError) {
+        console.error('Failed to send email notification:', emailError);
+        // Don't fail the form submission if email fails
+      }
 
       setSuccess(true);
       setFormData({
@@ -63,7 +73,7 @@ export default function Contact() {
               Get In Touch
             </h2>
             <p className="text-xl text-gray-600">
-              Ready to start your project? Contact us today!
+              Ready to start your project? Contact us today
             </p>
           </div>
 
