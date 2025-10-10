@@ -14,14 +14,14 @@ export default function Header() {
 
   return (
     <header className="fixed top-0 left-0 right-0 z-50 bg-white/95 backdrop-blur-sm shadow-sm">
-      <nav className="container mx-auto px-4 py-0">
+      <nav className="container mx-auto px-3 py-0">
         <div className="flex items-center justify-between">
           <a href="/" className="flex items-center hover:opacity-90 transition-opacity">
             <img 
               // Update the logo path to work with the base URL
-              src={`${import.meta.env.BASE_URL || ''}/logo.webp`} 
+              src={`${import.meta.env.BASE_URL || ''}/logo.png`} 
               alt="Redoxy Logo" 
-              className="h-16 w-auto"
+              className="h-20 w-22"
               onError={(e) => {
                 // Fallback in case the image fails to load
                 const target = e.target as HTMLImageElement;
@@ -43,9 +43,6 @@ export default function Header() {
             </button>
             <button onClick={() => scrollToSection('testimonials')} className="text-gray-700 hover:text-blue-600 transition">
               Testimonials
-            </button>
-            <button onClick={() => scrollToSection('pricing')} className="text-gray-700 hover:text-blue-600 transition">
-              Pricing
             </button>
             <button
               onClick={() => scrollToSection('contact')}
@@ -76,9 +73,6 @@ export default function Header() {
             </button>
             <button onClick={() => scrollToSection('testimonials')} className="block w-full text-left text-gray-700 hover:text-blue-600 transition">
               Testimonials
-            </button>
-            <button onClick={() => scrollToSection('pricing')} className="block w-full text-left text-gray-700 hover:text-blue-600 transition">
-              Pricing
             </button>
             <button
               onClick={() => scrollToSection('contact')}

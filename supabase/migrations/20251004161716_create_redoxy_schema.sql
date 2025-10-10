@@ -177,5 +177,5 @@ ON CONFLICT DO NOTHING;
 INSERT INTO testimonials (client_name, position, company, content, rating, is_featured) VALUES
   ('Muhammed Ayed Al Shamri', 'GM', 'GEMS', 'REDOXY solutions exceeded our expectations, revolutionizing our operations. A game-changer in engineering excellence!', 5, true),
   ('Saad Dhafer Al Muteb', 'Procurement Engineer', 'Farabi Petrochemicals', 'Outstanding environmental compliance services. Their team helped us achieve ISO 14001 certification ahead of schedule.', 5, true),
-  ('Remiz Ali Rasheed', '', 'CSMO ', 'Incredible service and unmatched expertise. REDOXY is the go-to for cutting-edge engineering solutions.', 5, true),
+  ('Remiz Ali Rasheed', '', 'CSMO ', 'Incredible service and unmatched expertise. REDOXY is the go-to for cutting-edge engineering solutions.', 5, true)
 ON CONFLICT DO NOTHING;

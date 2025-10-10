@@ -45,7 +45,7 @@ export default function Services() {
     urgency: 'medium'
   });
 
-  const categories = ['All', 'Waste Treatment', 'Environmental', 'Industrial', 'Other'];
+  const categories = ['All', 'Waste Treatment', 'Environmental', 'Industrial','Trading', 'Other'];
 
   useEffect(() => {
     fetchServices();
@@ -53,15 +53,24 @@ export default function Services() {
 
   const fetchServices = async () => {
     try {
-      const { data, error } = await supabase
+      console.log('Fetching services from Supabase...');
+      const { data, error, status } = await supabase
         .from('services')
         .select('*')
         .order('category', { ascending: true });
 
-      if (error) throw error;
+      console.log('Supabase response:', { status, data, error });
+      
+      if (error) {
+        console.error('Supabase error:', error);
+        throw error;
+      }
+      
       setServices(data || []);
+      console.log('Services loaded:', data?.length || 0);
     } catch (error) {
-      console.error('Error fetching services:', error);
+      console.error('Error in fetchServices:', error);
+      // You might want to set an error state to show to the user
     } finally {
       setLoading(false);
     }

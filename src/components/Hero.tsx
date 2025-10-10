@@ -12,24 +12,6 @@ export default function Hero() {
     <section id="home" className="pt-24 pb-16 bg-gradient-to-br from-slate-50 via-blue-50 to-slate-100">
       <div className="container mx-auto px-4">
         <div className="max-w-4xl mx-auto text-center">
-          <div className="flex justify-center items-center gap-4 mb-6">
-            <img 
-              src={`${import.meta.env.BASE_URL || ''}/ISO14001.png`} 
-
-              alt="ISO 9001 Certified" 
-              className="h-12 w-auto object-contain"
-            />
-            <img 
-              src={`${import.meta.env.BASE_URL || ''}/OHSAS-18001.png`} 
-              alt="ISO 14001 Certified" 
-              className="h-12 w-auto object-contain"
-            />
-            <img 
-              src={`${import.meta.env.BASE_URL || ''}/ISO-9001.webp`} 
-              alt="ISO 45001 Certified" 
-              className="h-12 w-auto object-contain"
-            />
-          </div>
 
           <h1 className="text-5xl md:text-6xl lg:text-7xl font-bold text-gray-900 mb-6 leading-tight">
             Revolutionizing Industrial Engineering with{' '}

@@ -48,3 +48,4 @@ export interface ServiceInquiry {
   project_details: string;
   urgency: 'low' | 'medium' | 'high' | 'critical';
 }
+
