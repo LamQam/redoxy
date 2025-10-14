@@ -158,7 +158,7 @@ export default function Chatbot() {
       {isOpen ? (
         <div className="bg-white rounded-lg shadow-xl w-80 h-[500px] flex flex-col border border-gray-200">
           {/* Header */}
-          <div className="bg-blue-600 text-white p-4 rounded-t-lg flex justify-between items-center">
+          <div className="bg-primary-orange text-white p-4 rounded-t-lg flex justify-between items-center">
             <h3 className="font-semibold">How can I help you?</h3>
             <button 
               onClick={() => setIsOpen(false)}
@@ -215,7 +215,7 @@ export default function Chatbot() {
               <button
                 type="submit"
                 disabled={!input.trim() || isTyping}
-                className="p-2 bg-blue-600 text-white rounded-lg hover:bg-blue-700 disabled:opacity-50 disabled:cursor-not-allowed"
+                className="p-2 bg-primary-orange text-white rounded-lg hover:bg-primary-orange/90 transition-colors disabled:opacity-50 disabled:cursor-not-allowed"
               >
                 <Send size={20} />
               </button>
@@ -225,7 +225,7 @@ export default function Chatbot() {
       ) : (
         <button
           onClick={() => setIsOpen(true)}
-          className="p-4 bg-blue-600 text-white rounded-full shadow-lg hover:bg-blue-700 transition-colors"
+          className="p-4 bg-primary-orange text-white rounded-full shadow-lg hover:bg-primary-orange/90 transition-colors"
           aria-label="Open chat"
         >
           <MessageCircle size={24} />

@@ -26,14 +26,14 @@ export default function Hero() {
           <div className="flex flex-col sm:flex-row gap-4 justify-center mb-16">
             <button
               onClick={scrollToContact}
-              className="bg-blue-600 text-white px-8 py-4 rounded-lg hover:bg-blue-700 transition flex items-center justify-center gap-2 text-lg font-semibold shadow-lg hover:shadow-xl"
+              className="bg-primary-orange text-white px-8 py-4 rounded-lg hover:bg-blue-700 transition flex items-center justify-center gap-2 text-lg font-semibold shadow-lg hover:shadow-xl"
             >
               Get Started
               <ArrowRight size={20} />
             </button>
             <button
               onClick={() => document.getElementById('services')?.scrollIntoView({ behavior: 'smooth' })}
-              className="bg-white text-blue-600 px-8 py-4 rounded-lg hover:bg-gray-50 transition border-2 border-blue-600 text-lg font-semibold"
+              className="bg-white text-primary-orange px-8 py-4 rounded-lg hover:bg-gray-50 transition border-2 border-primary-orange text-lg font-semibold"
             >
               View Services
             </button>

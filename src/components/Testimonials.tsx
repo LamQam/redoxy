@@ -96,7 +96,7 @@ export default function Testimonials() {
                 const element = document.getElementById('contact');
                 if (element) element.scrollIntoView({ behavior: 'smooth' });
               }}
-              className="bg-blue-600 text-white px-8 py-3 rounded-lg hover:bg-blue-700 transition font-semibold"
+              className="bg-primary-orange text-white px-8 py-3 rounded-lg hover:bg-blue-700 transition font-semibold"
             >
               Become a Client
             </button>
